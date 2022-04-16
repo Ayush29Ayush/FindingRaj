@@ -8,7 +8,7 @@ function App() {
       <div className="flex flex-col justify-between h-screen">
         <Navbar title="Finding Raj" />
 
-        <main>Content</main>
+        <main className="container mx-auto px-3 pb-12">Content</main>
 
         <Footer />
       </div>
