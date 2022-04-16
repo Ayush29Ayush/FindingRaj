@@ -5,7 +5,7 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col justify-between h-screen">
-        <Navbar />
+        <Navbar title="Finding Raj"/>
 
         <main>Content</main>
       </div>
