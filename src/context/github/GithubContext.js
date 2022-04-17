@@ -25,6 +25,7 @@ export const GithubProvider = ({ children }) => {
 
     dispatch({
       type: "GET_USERS",
+      payload: data,
     });
   };
 
