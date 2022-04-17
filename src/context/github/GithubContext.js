@@ -27,6 +27,7 @@ export const GithubProvider = ({ children }) => {
       value={{
         users,
         loading,
+        fetchUsers,
       }}
     >
       {children}
