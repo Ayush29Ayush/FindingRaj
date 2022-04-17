@@ -4,7 +4,7 @@ import UserItem from "./UserItem";
 import GithubContext from "../../context/github/GithubContext";
 
 function UserResults() {
-  
+  const { users, loading, fetchUsers } = useContext(GithubContext);
 
   useEffect(() => {
     fetchUsers();
@@ -19,7 +19,7 @@ function UserResults() {
       </div>
     );
   } else {
-      return <Spinner />
+    return <Spinner />;
   }
 }
 
