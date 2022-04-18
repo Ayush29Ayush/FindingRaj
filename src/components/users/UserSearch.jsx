@@ -1,20 +1,23 @@
 import { useState, useContext } from "react";
+import GithubContext from "../../context/github/GithubContext";
 
 function UserSearch() {
   const [text, setText] = useState("");
+
+  const { users } = useContext(GithubContext);
 
   const handleChange = (e) => setText(e.target.value);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (text === '') {
-        alert('Please enter something', 'error')
-      } else {
-        //TODO - search users
-        
-        setText("")
-      }
+    if (text === "") {
+      alert("Please enter something", "error");
+    } else {
+      //TODO - search users
+
+      setText("");
+    }
   };
 
   return (
@@ -40,7 +43,11 @@ function UserSearch() {
           </div>
         </form>
       </div>
-      <button className="btn btn-ghost btn-lg">Clear</button>
+      {users.length > 0 && (
+        <div>
+          <button className="btn btn-ghost btn-lg">Clear</button>
+        </div>
+      )}
     </div>
   );
 }
