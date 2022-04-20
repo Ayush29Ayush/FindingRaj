@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { FaCodepen, FaStore, FaUserFriends, FaUsers } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Spinner from "../components/layout/Spinner";
+import RepoList from "../components/repos/RepoList";
 
 function User() {
   const { getUser, user, loading } = useContext(GithubContext);
@@ -159,6 +160,8 @@ function User() {
             </div>
           </div>
         </div>
+
+        <RepoList />
       </div>
     </>
   );
