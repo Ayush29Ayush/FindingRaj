@@ -101,10 +101,11 @@ export const GithubProvider = ({ children }) => {
         // user: state.user,
         // repos: state.repos,
         ...state,
-        searchUsers,
-        clearUsers,
-        getUser,
-        getUserRepos,
+        dispatch,
+        // searchUsers,
+        // clearUsers,
+        // getUser,
+        // getUserRepos,
       }}
     >
       {children}
